@@ -1,0 +1,73 @@
+import java.util.Scanner;
+
+public class Vacaciones{
+  
+  public static void main(String args[]){
+    
+    String nombre ="";
+    int edad = 0, diasVacaciones = 0, departamento = 0, tiempoServicio=0;
+    
+    Scanner in = new Scanner (System.in);
+    
+    System.out.println(" ingresa tu nombre");
+    nombre = in.nextLine();
+
+    System.out.println("Ingresa tu edad");
+    edad = in.nextInt();
+
+    System.out.println("ingresa tus años de servicio");
+    tiempoServicio = in.nextInt();
+
+    System.out.println("ingresa tu departamento \n 1 : Atencion al cliente \n 2 : loguistica  \n 3 : gerencia ");
+    departamento = in.nextInt();
+
+    if (departamento== 1){
+	if(tiempoServicio== 1){
+          
+          System.out.println(nombre + " tus dias de vacasiones son : 6" );
+        }else if(tiempoServicio >2 && tiempoServicio <= 6){
+        
+          System.out.println(nombre + " Tus dias de vacaciones son : 14 ");
+        
+        }else if ( tiempoServicio>= 7){
+ 
+          System.out.println(nombre + " Tus dias de vacasiones son : 20");        
+
+        }       
+      
+    }else if(departamento==2){
+
+      if(tiempoServicio== 1){
+          
+          System.out.println(nombre + " tus dias de vacasiones son : 7" );
+        }else if(tiempoServicio >2 && tiempoServicio <= 6){
+        
+          System.out.println(nombre + " Tus dias de vacaciones son : 15 ");
+        
+        }else if ( tiempoServicio>= 7){
+ 
+          System.out.println(nombre + " Tus dias de vacasiones son : 22");        
+
+        }
+    
+    }else if(departamento==3){
+      if(tiempoServicio== 1){
+          
+          System.out.println(nombre + " tus dias de vacasiones son : 10" );
+        }else if(tiempoServicio >2 && tiempoServicio <= 6){
+        
+          System.out.println(nombre + " Tus dias de vacaciones son : 20 ");
+        
+        }else if ( tiempoServicio>= 7){
+ 
+          System.out.println(nombre + " Tus dias de vacasiones son : 30");        
+
+        }   
+    }else {
+    System.out.println("Tu departamento no existre");
+    }
+  }
+
+
+
+}
